@@ -23,8 +23,15 @@ export const AuthProvider = ({ children }) => {
     });
   };
 
+  const logout = () => {
+    localStorage.removeItem('user');
+    dispatch({
+      type: types.logout,
+    });
+  };
+
   return (
-    <AuthContext.Provider value={{ ...authState, login }}>
+    <AuthContext.Provider value={{ ...authState, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
