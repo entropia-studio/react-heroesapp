@@ -51,6 +51,7 @@ export const SearchPage = () => {
           <div
             className='alert alert-primary animate_animated animate__fadeIn'
             style={{ display: showSearch ? '' : 'none' }}
+            aria-label='Search a hero'
           >
             Search a hero
           </div>
