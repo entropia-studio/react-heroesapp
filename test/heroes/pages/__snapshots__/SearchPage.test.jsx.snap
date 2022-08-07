@@ -16,7 +16,9 @@ exports[`SearchPage debe de mostrarse correctamente con los valores por defecto 
         Searching
       </h4>
       <hr />
-      <form>
+      <form
+        data-testid="heroForm"
+      >
         <input
           autocomplete="off"
           class="form-control"
@@ -46,6 +48,7 @@ exports[`SearchPage debe de mostrarse correctamente con los valores por defecto 
         Search a hero
       </div>
       <div
+        aria-label="Hero not found"
         class="alert alert-danger animate_animated animate__fadeIn"
         style="display: none;"
       >

@@ -32,7 +32,7 @@ export const SearchPage = () => {
         <div className='col-5'>
           <h4>Searching</h4>
           <hr />
-          <form onSubmit={onSearchSubmit}>
+          <form onSubmit={onSearchSubmit} data-testid='heroForm'>
             <input
               type='text'
               placeholder='Search a hero'
@@ -59,6 +59,7 @@ export const SearchPage = () => {
           <div
             className='alert alert-danger animate_animated animate__fadeIn'
             style={{ display: showError ? '' : 'none' }}
+            aria-label='Hero not found'
           >
             This hero <b>{q}</b> doesn't exist
           </div>
